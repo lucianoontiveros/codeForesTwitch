@@ -11,3 +11,7 @@
 #cuerpoAlerta {
   width: 100%;
 }
+
+#cuerpoAlerta h5 {
+  color: rgba(167, 243, 208, 167);
+}

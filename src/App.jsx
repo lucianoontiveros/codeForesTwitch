@@ -9,7 +9,7 @@ function App() {
   const [code, setCode] = useState(false);
   const [timer, setTimer] = useState(null);
   const [codigoSala, setCodigoSala] = useState('')
-  const [aviso, setAviso] = useState("Bienvenidos a un canal de estudio #tercermundista !info !chenz !horario")
+  const [aviso, setAviso] = useState("Un canal de estudio y trabajo  #tercermundista")
 
   useEffect(() => {
     const client = new tmi.Client({
