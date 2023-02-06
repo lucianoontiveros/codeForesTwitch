@@ -56,7 +56,7 @@ function App() {
       }
 
       if (command === "code") {
-        client.say(channel, ('Este es el codigo de la salita actual https://www.forestapp.cc/join-room?token=' + codigoSala))
+        client.say(channel, ('Este es el codigo de la salita actual para no quedarte afuera https://www.forestapp.cc/join-room?token=' + codigoSala))
       }
     });
 
