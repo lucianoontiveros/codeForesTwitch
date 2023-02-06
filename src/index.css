@@ -8,6 +8,10 @@
   background-color: #000000;
 }
 
+#ancho {
+  width: 50%;
+}
+
 #banner h3 {
   font-size: 2em;
   font-family: 'Permanent Marker', cursive;
@@ -15,7 +19,7 @@
 }
 
 #banner p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: rgb(207, 224, 217);
 }
 
