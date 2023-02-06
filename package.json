@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "flowbite-react": "^0.3.8",
+    "flowbite": "^1.6.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tmi.js": "^1.8.5"

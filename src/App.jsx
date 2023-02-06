@@ -3,14 +3,13 @@ import tmi from 'tmi.js'
 import env from 'dotenv'
 import Code from './Components/Code.jsx';
 import Banner from './Components/Banner.jsx';
-import { Flowbite } from 'flowbite-react';
 
 
 function App() {
   const [code, setCode] = useState(false);
   const [timer, setTimer] = useState(null);
   const [codigoSala, setCodigoSala] = useState('')
-  const [aviso, setAviso] = useState("Bienvenidos a un canal de estudio #tercermundista !info !chenz !horario !reglas !comandos !tutoriales !page !code")
+  const [aviso, setAviso] = useState("Bienvenidos a un canal de estudio #tercermundista !info !chenz !horario")
 
   useEffect(() => {
     const client = new tmi.Client({
