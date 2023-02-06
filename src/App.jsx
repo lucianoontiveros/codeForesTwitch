@@ -49,6 +49,12 @@ function App() {
         }
       }
 
+      if (command === "aviso") {
+        if (username === 'cuartodechenz' || isMod) {
+          setAviso(message)
+        }
+      }
+
       if (command === "code") {
         client.say(channel, ('Este es el codigo de la salita actual https://www.forestapp.cc/join-room?token=' + codigoSala))
       }
