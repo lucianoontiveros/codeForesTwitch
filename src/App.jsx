@@ -44,7 +44,7 @@ function App() {
             setTimeout(() => {
               setCode(false);
               setTimer(null);
-            }, 760000)
+            }, 780000)
           );
         }
       }
