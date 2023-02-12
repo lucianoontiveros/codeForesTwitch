@@ -34,9 +34,8 @@ function App() {
       if (self || !message.startsWith('!')) return;
       const args = message.slice(1).split(' ');
       const command = args.shift().toLowerCase();
-
       if (command === "codigo") {
-        if (username === 'cuartodechenz' || isMod) {
+        if (username === 'cuartodechenz' || username === isMod) {
           console.log(args)
           setCodigoSala(args)
           setCode(true);
@@ -50,7 +49,7 @@ function App() {
       }
 
       if (command === "aviso") {
-        if (username === 'cuartodechenz' || isMod) {
+        if (username === 'cuartodechenz' || username === isMod) {
           setAviso(message)
         }
       }
