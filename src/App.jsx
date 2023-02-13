@@ -53,7 +53,7 @@ function App() {
           setAviso(message)
           break;
         case 'code':
-          if (username === 'cuartodechenz' || username === isMod) {
+          if (username === 'cuartodechenz' || isMod) {
             args = '';
             client.say(channel, `Este es el codigo de la salita actual para no quedarte afuera https://www.forestapp.cc/join-room?token=${codigoSala}`)
           }
