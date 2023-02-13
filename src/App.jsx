@@ -32,7 +32,7 @@ function App() {
       const username = userstate.username;
       const isMod = userstate.badges?.moderator
       if (self || !message.startsWith('!')) return;
-      const args = message.slice(1).split(' ');
+      var args = message.slice(1).split(' ');
       const command = args.shift().toLowerCase();
       if (command === "codigo") {
         if (username === 'cuartodechenz' || username === isMod) {
@@ -48,14 +48,18 @@ function App() {
         }
       }
 
-      if (command === "aviso") {
-        if (username === 'cuartodechenz' || username === isMod) {
+      switch (command) {
+        case 'aviso':
           setAviso(message)
-        }
-      }
-
-      if (command === "code") {
-        client.say(channel, ('Este es el codigo de la salita actual para no quedarte afuera https://www.forestapp.cc/join-room?token=' + codigoSala))
+          break;
+        case 'code':
+          if (username === 'cuartodechenz' || username === isMod) {
+            args = '';
+            client.say(channel, `Este es el codigo de la salita actual para no quedarte afuera https://www.forestapp.cc/join-room?token=${codigoSala}`)
+          }
+          break;
+        default:
+          console.log('La peticion no puede realizarse')
       }
     });
 
@@ -72,7 +76,7 @@ function App() {
         <Banner aviso={aviso} />
       )}
     </div>
-  );
-};
+  )
+}
 
 export default App
