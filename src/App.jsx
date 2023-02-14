@@ -27,6 +27,8 @@ function App() {
 
     client.connect();
 
+    let timerId = null;
+
     client.on("message", (channel, userstate, message, self) => {
       if (self) return;
       const username = userstate.username;
@@ -40,12 +42,13 @@ function App() {
           console.log(args)
           setCodigoSala(args)
           setCode(true);
-          setTimer(
-            setTimeout(() => {
-              setCode(false);
-              setTimer(null);
-            }, 780000)
-          );
+          if (timerId) {
+            clearTimeout(timerId);
+          }
+          timerId = setTimeout(() => {
+            setCode(false);
+            timerId = null;
+          }, 780000);
         }
       }
 
@@ -66,8 +69,11 @@ function App() {
 
     return () => {
       client.disconnect();
+      if (timerId) {
+        clearTimeout(timerId);
+      }
     };
-  }, [timer]);
+  }, [codigoSala]);
 
   return (
     <div>
