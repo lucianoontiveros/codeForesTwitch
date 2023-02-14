@@ -31,11 +31,12 @@ function App() {
       if (self) return;
       const username = userstate.username;
       const isMod = userstate.badges?.moderator
+      const mod = userstate?.mod;
       if (self || !message.startsWith('!')) return;
       var args = message.slice(1).split(' ');
       const command = args.shift().toLowerCase();
       if (command === "codigo") {
-        if (username === 'cuartodechenz' || username === isMod) {
+        if (username === 'cuartodechenz' || mod) {
           console.log(args)
           setCodigoSala(args)
           setCode(true);
@@ -53,7 +54,7 @@ function App() {
           setAviso(message)
           break;
         case 'code':
-          if (username === 'cuartodechenz' || isMod) {
+          if (username === 'cuartodechenz' || mod) {
             args = '';
             client.say(channel, `Este es el codigo de la salita actual para no quedarte afuera https://www.forestapp.cc/join-room?token=${codigoSala}`)
           }
