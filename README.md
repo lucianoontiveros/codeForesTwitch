@@ -9,7 +9,7 @@ Con conocimiento basico de React y con el fin de practicar lo aprendido de algun
 La ejecución es simple, con el comando !aviso se deja registrado el mensaje, por lo general corto para no modificar el estilo del contenedor, y esto también permite claridad en lo que se quiere escribir. Este mensaje estará visible en pantalla con el nombre del canal todo el tiempo, excepto al ingresar el código de sala de forest.
 [![image.png](https://i.postimg.cc/rmb7QTdY/image.png)](https://postimg.cc/2bQHSP74)
 Al ingresar el comando !codigo + el código de la sala, el contenedor visualizará el código de sala por 7 minutos, por lo cual el aviso anterior no se mostrará en pantalla hasta consumirse el recurso. De todas maneras cualquier nueva aviso quedará registrado y al terminar se mostrará con normalidad.
-[![Ejecuccion.png](https://i.postimg.cc/jjtgX5Mj/Ejecuccion.png)](https://postimg.cc/WdYwp2LR)
+[![image.png](https://i.postimg.cc/PfzgT2QR/image.png)](https://postimg.cc/bdrCR0Mx)
 
 ##COMANDOS
 - !aviso: ingresado el comando más el aviso pertinente queda registrado para mostrarse en pantalla.
