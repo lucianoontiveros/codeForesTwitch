@@ -55,7 +55,9 @@ function App() {
 
       switch (command) {
         case 'aviso':
-          setAviso(message);
+          if (username === 'cuartodechenz' || mod) {
+            setAviso(message);
+          }
           break;
         case 'code':
           if (username === 'cuartodechenz' || mod) {
